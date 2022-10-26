@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EditImagePreview">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:id="@+id/lenear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adViewEdit"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="11dp"
+            android:background="@drawable/button_background"
+            android:padding="12dp"
+            android:src="@drawable/shared" />
+
+        <ImageView
+            android:id="@+id/img_down"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_margin="11dp"
+            android:background="@drawable/button_background"
+            android:padding="12dp"
+            android:src="@drawable/folder" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="11dp"
+            android:background="@drawable/button_background"
+            android:padding="12dp"
+            android:src="@drawable/delete" />
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+
+        android:id="@+id/adViewEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111">
+
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
